@@ -1,0 +1,7 @@
+/* jshint ignore:start */
+var templates = {};
+{{#templates}}
+templates['{{name}}'] = new Hogan.Template({{{template}}});
+{{/templates}}
+export default templates;
+/* jshint ignore:end */

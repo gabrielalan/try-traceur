@@ -1,0 +1,9 @@
+/* jshint ignore:start */
+var templates = {};
+templates['footer'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<address>Copyright &copy; 2015</address>");return t.fl(); },partials: {}, subs: {  }});
+templates['header'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<h1>");t.b(t.v(t.f("name",c,p,0)));t.b("</h1>");return t.fl(); },partials: {}, subs: {  }});
+templates['main'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<section>\r");t.b("\n" + i);t.b("	<header id=\"header\"></header>\r");t.b("\n" + i);t.b("	<navigation id=\"menu\"></navigation>\r");t.b("\n" + i);t.b("	<section id=\"sidebar\"></section>\r");t.b("\n" + i);t.b("	<article id=\"content\">Carregando..</article>\r");t.b("\n" + i);t.b("	<footer id=\"footer\"></footer>\r");t.b("\n" + i);t.b("</section>");return t.fl(); },partials: {}, subs: {  }});
+templates['menu'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<ul>\r");t.b("\n" + i);if(t.s(t.f("items",c,p,1),c,p,0,16,89,"{{ }}")){t.rs(c,p,function(c,p,t){if(t.s(t.f("active",c,p,1),c,p,0,30,76,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("	<li><a href=\"");t.b(t.v(t.f("path",c,p,0)));t.b("\">");t.b(t.v(t.f("name",c,p,0)));t.b("</a></li>\r");t.b("\n" + i);});c.pop();}});c.pop();}t.b("</ul>");return t.fl(); },partials: {}, subs: {  }});
+templates['post'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<article id=\"");t.b(t.v(t.f("_id",c,p,0)));t.b("\">\r");t.b("\n" + i);t.b("	<h2>");t.b(t.v(t.f("title",c,p,0)));t.b("</h2>\r");t.b("\n" + i);t.b("	<p>");t.b(t.v(t.f("text",c,p,0)));t.b("</p>\r");t.b("\n" + i);t.b("</article>");return t.fl(); },partials: {}, subs: {  }});
+export default templates;
+/* jshint ignore:end */
