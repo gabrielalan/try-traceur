@@ -18,9 +18,7 @@ app.get('/menu/:id', function(req, res){
 });
 
 app.get('/post/:id', function(req, res){
-	setTimeout(function(){
-		res.json( { _id: req.params.id, title: 'Título', text: 'ASD ASD AS DASD ASH DASHDAS DUA DHA' } );
-	}, 2000);
+	res.json( { _id: req.params.id, title: 'Título', text: 'ASD ASD AS DASD ASH DASHDAS DUA DHA' } );
 });
 
 app.get('/posts/:page', function(req, res){
