@@ -17,18 +17,20 @@ app.get('/menu/:id', function(req, res){
 	});
 });
 
+app.get('/post/:id', function(req, res){
+	setTimeout(function(){
+		res.json( { _id: req.params.id, title: 'Título', text: 'ASD ASD AS DASD ASH DASHDAS DUA DHA' } );
+	}, 2000);
+});
+
 app.get('/posts/:page', function(req, res){
+	var posts = [], cont = 0, max = req.params.page * 5;
+
+	for(; cont < max; cont++)
+		posts.push({ _id: cont+'8d13ej22o3ie', title: 'Título', text: 'ASD ASD AS DASD ASH DASHDAS DUA DHA' });
+
 	res.json({
-		posts: [
-			{ _id: '1d13ej22o3ie', title: 'asdasd', text: 'asdasdas' },
-			{ _id: '2d13ej22o3ie', title: 'asdasd', text: 'asdasdas' },
-			{ _id: '3d13ej22o3ie', title: 'asdasd', text: 'asdasdas' },
-			{ _id: '4d13ej22o3ie', title: 'asdasd', text: 'asdasdas' },
-			{ _id: '5d13ej22o3ie', title: 'asdasd', text: 'asdasdas' },
-			{ _id: '6d13ej22o3ie', title: 'asdasd', text: 'asdasdas' },
-			{ _id: '7d13ej22o3ie', title: 'asdasd', text: 'asdasdas' },
-			{ _id: '8d13ej22o3ie', title: 'asdasd', text: 'asdasdas' },
-		]
+		posts: posts
 	});
 });
 

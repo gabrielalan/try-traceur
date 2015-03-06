@@ -9,9 +9,9 @@ export default class Post extends Backbone.Model {
 
 	defaults() {
 		return {
-			name: '',
-			region: '',
-			text: ''
+			title: '',
+			text: '',
+			edit: false
 		}
 	}
 }

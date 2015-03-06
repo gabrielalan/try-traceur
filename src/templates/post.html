@@ -1,4 +1,21 @@
-<article id="{{_id}}">
-	<h2>{{title}}</h2>
-	<p>{{text}}</p>
+{{#edit}}
+<div class="loading"></div>
+{{/edit}}
+
+<article id="{{_id}}" class="post" {{#edit}}contenteditable="true"{{/edit}}>
+	<h2 class="title">
+		{{title}}
+		{{^edit}}
+		<a href="/post/edit/{{_id}}" class="btn edit-post">Editar</a>
+		{{/edit}}
+	</h2>
+
+	<p class="text">{{text}}</p>
+
+	{{#edit}}
+	<div class="actions">
+		<a href="/" class="btn btn-primary save-post pull-right" contenteditable="false">Salvar</a>
+		<a href="/" class="btn view-post pull-right" contenteditable="false">Visualizar</a>
+	</div>
+	{{/edit}}
 </article>

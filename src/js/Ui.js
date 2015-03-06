@@ -6,11 +6,20 @@ import MenuModel from './Model/Menu.js';
 class Ui extends Backbone.Marionette.Application {
 	initialize( options = {} ) {
 		this.views = {};
+		this.routers = {};
 
 		_.extend(this, options);
 
 		if( !this.layout )
 			throw new Error('The LayoutView is necessary');
+	}
+
+	addRouter(name, instance) {
+		this.routers[name] = instance;
+	}
+
+	getRouter(name) {
+		return typeof this.routers[name] ? this.routers[name] : false;
 	}
 
 	get header() {

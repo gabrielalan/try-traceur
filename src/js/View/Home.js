@@ -8,8 +8,4 @@ export default class Home extends Marionette.CollectionView {
 	get childView() {
 		return Post;
 	}
-
-	get template() {
-		return 'home';
-	}
 }

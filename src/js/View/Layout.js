@@ -1,4 +1,4 @@
-export default class Layout extends Backbone.Marionette.LayoutView {
+export default class Layout extends Marionette.LayoutView {
 	constructor() {
 		this.regions = {
 			header: "#header",
@@ -6,10 +6,13 @@ export default class Layout extends Backbone.Marionette.LayoutView {
 			content: "#content",
 			sidebar: "#sidebar",
 			footer: "#footer"
-		}
+		};
 
 		super(arguments);
 	}
+
+	/*onRender() {
+	}*/
 
 	get template() {
 		return 'main';

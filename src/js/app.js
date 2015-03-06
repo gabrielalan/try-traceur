@@ -21,6 +21,8 @@ ui.on('start', function() {
 	Backbone.history.start({ pushState: true });
 });
 
-window.router = new Default( ui );
+new Default( ui );
+
+window.app = ui;
 
 ui.run();

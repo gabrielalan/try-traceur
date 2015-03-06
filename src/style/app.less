@@ -5,10 +5,17 @@ body {
 	padding: 0;
 }
 
+@import '_global';
+
 .container {
 	width: 960px;
 	background-color: white;
 	margin: 0 auto;
+}
+
+#content {
+	min-height: 30px;
+	position: relative;
 }
 
 #header {
@@ -34,15 +41,6 @@ body {
 
 		a {
 			display: block;
-			padding: 10px;
-			color: #333;
-			background-color: #eee;
-			font-weight: bold;
-			text-decoration: none;
-
-			&:hover {
-				background-color: #ccc;
-			}
 		}
 	}
 }
@@ -53,3 +51,5 @@ body {
 	padding: 10px 0px;
 	color: white;
 }
+
+@import '_post';
