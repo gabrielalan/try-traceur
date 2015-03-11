@@ -9,7 +9,7 @@ export default class Default extends Router {
 		return {
 			"": 'home',
 			"post/edit/:id": 'postEdit',
-			"article/:id": 'article'
+			"post/:id": 'article'
 		}
 	}
 
@@ -31,7 +31,7 @@ export default class Default extends Router {
 		this.setContent(view);
 	}
 
-	article( id ) {
+	post( id ) {
 		console.log('Article: ' + id);
 	}
 }

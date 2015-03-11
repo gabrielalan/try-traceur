@@ -18,7 +18,15 @@ app.get('/menu/:id', function(req, res){
 });
 
 app.get('/post/:id', function(req, res){
-	res.json( { _id: req.params.id, title: 'Título', text: 'ASD ASD AS DASD ASH DASHDAS DUA DHA' } );
+	var comments = [
+		{ name: 'ASD', text: 'Teadasd' },
+		{ name: 'ASD', text: 'Teadasd' },
+		{ name: 'ASD', text: 'Teadasd' },
+		{ name: 'ASD', text: 'Teadasd' },
+		{ name: 'ASD', text: 'Teadasd' }
+	];
+
+	res.json( { _id: req.params.id, title: 'Título', text: 'ASD ASD AS DASD ASH DASHDAS DUA DHA', comments: comments } );
 });
 
 app.get('/posts/:page', function(req, res){

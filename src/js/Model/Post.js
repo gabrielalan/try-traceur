@@ -11,7 +11,10 @@ export default class Post extends Backbone.Model {
 		return {
 			title: '',
 			text: '',
-			edit: false
+			edit: false,
+			comments: [
+				{ name: '', text: '' }
+			]
 		}
 	}
 }
